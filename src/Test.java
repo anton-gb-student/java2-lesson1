@@ -28,7 +28,7 @@ public class Test {
         Apple ap1 = new Apple();
         Apple ap2 = new Apple();
         Orange o1 = new Orange();
-        System.out.println(ap1.getWeight());
+        System.out.println(ap1.getWeight()); // Проверяем вес фруктов
         System.out.println(o1.getWeight());
 
         Orange o2 = new Orange();
@@ -37,20 +37,20 @@ public class Test {
         Box <Apple> box1 = Box.getOneBox();
         box1.addFruit(ap1);
         box1.addFruit(ap2);
-        box1.addFruit(ap3);
+        box1.addFruit(ap3); // Итого в ящике 1 лежат 3 яблока
         Box <Orange> box2 = Box.getOneBox();
         box2.addFruit(o1);
-        System.out.println("Вес ящика 1 = " + box1.getWeight());
+        System.out.println("Вес ящика 1 = " + box1.getWeight()); // Проверяем вес ящиков
         System.out.println("Вес ящика 2 = " + box2.getWeight());
         System.out.println(box1.compare(box2));
 
         Box<Orange> box3 = Box.getOneBox();
         box3.addFruit(o2);
-        box2.pourOutFruits(box3);
+        box2.pourOutFruits(box3); // Теперь в ящике 3 лежат 2 апельсина
         System.out.println("Вес ящика 1 = " + box1.getWeight());
         System.out.println("Вес ящика 2 = " + box2.getWeight());
         System.out.println("Вес ящика 3 = " + box3.getWeight());
-        System.out.println(box1.compare(box3));
+        System.out.println(box1.compare(box3)); // Ящик 1 и ящик 3 сравнялись по весу
 
         Integer[] arr = {0,1,2,3,4,5,6,7,8,9};
         Integer[] arr2 = reshuffle(arr,2,3);
